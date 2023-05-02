@@ -1,0 +1,117 @@
+<mat-drawer-container class="example-container"  autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
+
+    <mat-toolbar-row>
+      <span class="example-spacer"></span>
+      <button mat-icon-button (click)="!drawer.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar-row>
+    <mat-divider></mat-divider>
+    <mat-toolbar-row>
+      <a class=" mat-body mat-body-1">WISHLIST</a>
+      <span class="example-spacer"></span>
+      <a  class=" mat-body mat-body-1">ACCOUNT</a>
+      <a  class="space1 mat-body mat-body-1">BASKET</a>
+    </mat-toolbar-row>
+    <mat-divider></mat-divider>
+    <span class="span">LOG IN</span>
+    <br>
+    <a>To access your account</a>
+    
+
+
+  </mat-drawer>
+<header>
+  <mat-toolbar style="height:30px;">
+    <span class="span mat-small mat-caption">Free delivery on orders over 190€</span>
+  </mat-toolbar>
+
+  <mat-toolbar style="background-color:white;">
+
+    <mat-toolbar-row>
+      <span>WeDressGreen</span>
+      <mat-divider class="vertical-divider"></mat-divider>
+      <span>Re-sell</span>
+      <mat-divider class="vertical-divider"></mat-divider>
+      <span>Brands</span>
+
+      <span class="example-spacer"></span>
+
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+
+      <button mat-icon-button>
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>shopping_basket</mat-icon>
+      </button>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="separator">
+      <a mat-button href="https://www.google.com/" target="_blank">Clothing</a>
+      <a mat-button href="https://www.google.com/" target="_blank">Accessories</a>
+      <a mat-button href="https://www.google.com/" target="_blank">Coming soon</a>
+      <span class="example-spacer"></span>
+        <a mat-button href="https://www.google.com/" target="_blank">Campaign stories</a>
+        <a mat-button href="https://www.google.com/" target="_blank">About us</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+</header>
+
+<body>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>
+</body>
+
+<mat-divider></mat-divider>
+
+<footer >
+  <mat-toolbar style="height:300px;">
+    <mat-toolbar-row>
+      <a class="space1 mat-body mat-body-1">NEWSLETTER</a>
+      <a  class="space mat-body mat-body-1">WEDRESSGREEN</a>
+      <a  class="space mat-body mat-body-1">CUSTOMER SERVICE</a>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <a class="space1 mat-small mat-caption"> Sign up to our newsletter for inspiration, <br> more behind the scenes & exclusive updates.</a>
+      <a  class="space mat-body mat-body-1">About us</a>
+      <!--<div class="footer-social-links">
+        <a mat-icon-button href="#" aria-label="Facebook">
+          <mat-icon>facebook</mat-icon>
+        </a>
+      </div>-->
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+      <form class="footer-newsletter-form" >
+        <mat-form-field appearance="outline">
+          <mat-label>Subscribe to our newsletter</mat-label>
+          <input matInput placeholder="Email address"  >
+          <button mat-icon-button type="submit">
+            <mat-icon>mail</mat-icon>
+          </button>
+        </mat-form-field>
+      </form>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+      <span class="footer-text">©2023 WeDressGreen</span>
+      <span class="footer-spacer"></span>
+      <a mat-button href="#">Privacy Policy</a>
+      <a mat-button href="#">Terms of Service</a>
+      <a mat-button href="#">Contact Us</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</footer>
+</mat-drawer-container>
+
+
+
