@@ -16,6 +16,8 @@ export class HeaderComponent {
   remail: string | undefined;
   rpassword: string | undefined;
   rcpassword: string | undefined;
+  isLoggedIn: any;
+  username: any;
   constructor(public dialog: MatDialog, private snackBar:MatSnackBar) {}
   register() {
 
@@ -29,6 +31,7 @@ export class HeaderComponent {
   }
 
 
+  logout() {
 
-
+  }
 }

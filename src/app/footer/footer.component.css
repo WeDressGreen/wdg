@@ -15,28 +15,21 @@
   border-color: black;
   height: 5px; /* adjust to your desired height */
   caret-color: black;
-}
-::ng-deep .mat-focused .mat-form-field-label {
-  /*change color of label*/
-  color: black !important;
+  width: 300px;
 }
 
-::ng-deep.mat-form-field-underline {
-  /*change color of underline*/
-  background-color: black !important;
-}
-
-::ng-deep.mat-form-field-ripple {
-  /*change color of underline when focused*/
-  background-color: black !important;
-}
 .footer-col {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 40px;
-  margin-left: 45px;
+  padding: 30px;
+  margin-left: 20px;
+  grid-gap: 0 !important;
+}
+.footer-col-bigger{
+  width: 400px;
+  margin-left: 65px !important;
 }
 @media (max-width: 767px) {
   .footer-row {

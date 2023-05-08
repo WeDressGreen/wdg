@@ -9,6 +9,8 @@ import { MatNativeDateModule} from '@angular/material/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { BodyComponent } from './body/body.component';
+import { AccountComponent } from './account/account.component';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    BodyComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
