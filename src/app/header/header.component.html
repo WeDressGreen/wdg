@@ -1,6 +1,4 @@
-
-
-<mat-drawer #drawer class="example-sidenav" mode="side" position="end">
+<mat-drawer #drawer class="sidenav"  position="end">
   <mat-toolbar-row style="height:94px;">
     <span class="example-spacer"></span>
     <button mat-icon-button (click)="!drawer.toggle()">
@@ -13,7 +11,7 @@
     <mat-card class="example-card">
       <mat-card-content>
         <mat-tab-group>
-          <mat-tab label="ACCOUNT">
+          <mat-tab  label="ACCOUNT">
             <mat-card-header  class="header-container">
               <mat-card-title>LOG IN</mat-card-title>
               <mat-card-subtitle>To access your account</mat-card-subtitle>
@@ -69,8 +67,7 @@
     </mat-card>
   </div>
 </mat-drawer>
-
-<header>
+<header class="sidenav-content">
   <mat-toolbar style="height:25px;">
     <span class="span mat-small mat-caption">Free delivery on orders over 190€</span>
   </mat-toolbar>
@@ -87,13 +84,13 @@
       <span class="example-spacer"></span>
 
       <button mat-icon-button (click)="drawer.toggle()">
-        <mat-icon>account_circle</mat-icon>
+        <mat-icon routerLink="/account">account_circle</mat-icon>
       </button>
 
-      <button mat-icon-button>
+      <button mat-icon-button (click)="!drawer.toggle()">
         <mat-icon>favorite</mat-icon>
       </button>
-      <button mat-icon-button>
+      <button mat-icon-button (click)="!drawer.toggle()">
         <mat-icon>shopping_basket</mat-icon>
       </button>
     </mat-toolbar-row>

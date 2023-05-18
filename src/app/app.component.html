@@ -1,17 +1,138 @@
-<mat-drawer-container class="example-container"  autosize>
+<mat-drawer-container autosize class="container">
 
-<app-header></app-header>
+  <mat-drawer #drawer class="sidenav" position="end">
+    <mat-toolbar-row style="height:94px;">
+      <span class="example-spacer"></span>
+      <button (click)="!drawer.toggle()" mat-icon-button>
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar-row>
+    <mat-divider></mat-divider>
+    <mat-tab-group #tabGroup class="center-content1">
+      <mat-tab label="ACCOUNT">
+        <mat-divider></mat-divider>
+        <mat-card-header class="header-container">
+          <mat-card-title>LOG IN</mat-card-title>
+          <mat-card-subtitle>To access your account</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input [(ngModel)]="email" matInput placeholder="Email" type="email" value="">
+            <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input [(ngModel)]="password" matInput placeholder="Password" type="password">
+            <mat-icon matSuffix>vpn_key</mat-icon>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions class="centered-button">
+          <button (click)="login()"  color="primary" mat-button>SIGN IN</button>
+        </mat-card-actions>
+
+      </mat-tab>
+
+      <mat-tab label="SIGN UP">
+        <mat-divider></mat-divider>
+        <mat-card-header class="header-container">
+          <mat-card-title>SIGN UP</mat-card-title>
+          <mat-card-subtitle>To create your account</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input [(ngModel)]="remail" matInput placeholder="Email" type="email" value="">
+            <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input [(ngModel)]="rpassword" matInput placeholder="Password" type="password">
+            <mat-icon matSuffix>vpn_key</mat-icon>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input [(ngModel)]="rcpassword" matInput placeholder="Password" type="password">
+            <mat-icon matSuffix>vpn_key</mat-icon>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions class="centered-button">
+        <button (click)="register()"  color="primary" mat-button>CREATE AN ACCOUNT</button>
+        </mat-card-actions>
+      </mat-tab>
+
+      <mat-tab label="WISHLIST">
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <p>
+            ❤️
+            <br>
+            Aucun produit ajouté pour le moment.
+            <br>
+            Créez un compte ou connectez-vous pour pouvoir enregistrer la liste de souhaits
+          </p>
+        </mat-card-content>
+      </mat-tab>
+
+      <mat-tab label="BASKET">
+        <mat-divider></mat-divider>
+        VOTRE PANIER EST VIDE.
+      </mat-tab>
+    </mat-tab-group>
+  </mat-drawer>
+
+  <header class="sidenav-content">
+    <mat-toolbar style="height:25px;">
+      <span class="span mat-small mat-caption">Free delivery on orders over 190€</span>
+    </mat-toolbar>
+
+    <mat-toolbar style="background-color:white;">
+
+      <mat-toolbar-row>
+        <span>WeDressGreen</span>
+        <mat-divider class="vertical-divider"></mat-divider>
+        <span>Re-sell</span>
+        <mat-divider class="vertical-divider"></mat-divider>
+        <span>Brands</span>
+
+        <span class="example-spacer"></span>
+
+        <button (click)="drawer.toggle()" mat-icon-button>
+          <mat-icon>account_circle</mat-icon>
+        </button>
+
+        <button (click)="drawer.toggle(); toggleTab(2)" mat-icon-button>
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button (click)="drawer.toggle(); toggleTab(3)" mat-icon-button>
+          <mat-icon>shopping_basket</mat-icon>
+        </button>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row class="separator">
+        <button color="primary" mat-button routerLink="/products">Clothing</button>
+        <a href="https://www.google.com/" mat-button target="_blank">Accessories</a>
+        <a href="https://www.google.com/" mat-button target="_blank">Coming soon</a>
+        <span class="example-spacer"></span>
+        <a href="https://www.google.com/" mat-button target="_blank">Campaign stories</a>
+        <a href="https://www.google.com/" mat-button target="_blank">About us</a>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+  </header>
 
 
-<app-body></app-body>
+
+    <router-outlet></router-outlet>
 
 
-<mat-divider></mat-divider>
 
-  <app-body></app-body>
+  <mat-divider></mat-divider>
 
 
-<app-footer></app-footer>
+
+
+  <app-footer></app-footer>
 </mat-drawer-container>
 
 

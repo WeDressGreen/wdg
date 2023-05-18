@@ -1,12 +1,25 @@
 
-.example-container {
-  width: 100%;
-  height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+container {
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+ }
+
+.container .mat-drawer {
+  padding-left:20px;
+  min-width:200px;
+  max-width: 550px;
 }
 .example-spacer {
   flex: 1 1 auto;
 }
+.centered-button {
+  display: flex;
+  justify-content: center;
+}
+
 .span {
   margin: auto;
 }
@@ -31,12 +44,7 @@
   transform: rotate(90deg);
   border-color: black;
 }
-.vertical-divider-large {
-  height: 100%;
-  margin: 0 150px;
-  transform: rotate(90deg);
-  border-color: black;
-}
+
 
 .space {
   margin-left: 270px;
@@ -45,9 +53,69 @@
   margin-left: 50px;
 }
 
-body{
-  overflow: hidden !important;
+.example-card {
+  max-width: 100%;
 }
-.mat-drawer-inner-container {
-  overflow: hidden !important;
+
+.center-content {
+  margin-top: -10px;
+  text-align: -webkit-center;
 }
+.center-content1 {
+  text-align: -webkit-center;
+}
+
+.centered-card-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  margin-top: 40px;
+  width: 100%;
+}
+.mat-button{
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  height: 40px;
+  background-color: #3F51B5;
+}
+
+.header-container {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.mat-toolbar-row {
+  padding: 8px 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+
+  html{
+    font-size:10px
+  }
+  .mat-toolbar-row {
+    padding: 4px;
+  }
+
+  .vertical-divider {
+    margin: 0 6px;
+  }
+}
+
+
