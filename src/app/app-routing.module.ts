@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BodyComponent } from './body/body.component';
 
 // @ts-ignore
 const routes: Routes = [
@@ -9,7 +10,7 @@ const routes: Routes = [
     },
   {
         path:'',
-        loadChildren:()=>import('./mains/mains.module').then(p => p.MainsModule)
+        component: BodyComponent,
    },
 
     {

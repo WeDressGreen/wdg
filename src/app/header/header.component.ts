@@ -4,12 +4,14 @@ import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/form
 import {MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {  OnInit, ViewChild, ElementRef } from '@angular/core';
+import { MatTabGroup } from '@angular/material/tabs';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  @ViewChild(MatTabGroup) tabGroup: MatTabGroup | undefined;
   showFiller = false;
   email: string | undefined;
   password: string | undefined;
@@ -18,6 +20,8 @@ export class HeaderComponent {
   rcpassword: string | undefined;
   isLoggedIn: any;
   username: any;
+  drawer: any;
+
   constructor(public dialog: MatDialog, private snackBar:MatSnackBar) {}
   register() {
 
@@ -34,4 +38,14 @@ export class HeaderComponent {
   logout() {
 
   }
+
+
+
+
+
+  toggleTab(index: number) {
+    if(this.tabGroup)
+      this.tabGroup.selectedIndex = index;
+  }
+
 }

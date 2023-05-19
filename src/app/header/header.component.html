@@ -1,72 +1,3 @@
-<mat-drawer #drawer class="sidenav"  position="end">
-  <mat-toolbar-row style="height:94px;">
-    <span class="example-spacer"></span>
-    <button mat-icon-button (click)="!drawer.toggle()">
-      <mat-icon>close</mat-icon>
-    </button>
-  </mat-toolbar-row>
-  <mat-divider></mat-divider>
-
-  <div class="center-content">
-    <mat-card class="example-card">
-      <mat-card-content>
-        <mat-tab-group>
-          <mat-tab  label="ACCOUNT">
-            <mat-card-header  class="header-container">
-              <mat-card-title>LOG IN</mat-card-title>
-              <mat-card-subtitle>To access your account</mat-card-subtitle>
-            </mat-card-header>
-
-            <mat-form-field class="example-full-width">
-              <mat-label>Email</mat-label>
-              <input type="email" matInput placeholder="Email" value="" [(ngModel)]="email">
-              <mat-icon matSuffix>email</mat-icon>
-            </mat-form-field>
-
-            <mat-form-field class="example-full-width">
-              <mat-label>Password</mat-label>
-              <input type="password" matInput placeholder="Password" [(ngModel)]="password">
-              <mat-icon matSuffix>vpn_key</mat-icon>
-            </mat-form-field>
-            <button mat-button color="primary" (click)="login()">SIGN IN</button>
-          </mat-tab>
-          <mat-tab label="SIGN UP">
-
-            <mat-card-header  class="header-container">
-              <mat-card-title>SIGN UP</mat-card-title>
-              <mat-card-subtitle>To create your account</mat-card-subtitle>
-            </mat-card-header>
-            <mat-form-field class="example-full-width">
-              <mat-label>Email</mat-label>
-              <input type="email" matInput placeholder="Email" value="" [(ngModel)]="remail">
-              <mat-icon matSuffix>email</mat-icon>
-            </mat-form-field>
-
-            <mat-form-field class="example-full-width">
-              <mat-label>Password</mat-label>
-              <input type="password" matInput placeholder="Password" [(ngModel)]="rpassword">
-              <mat-icon matSuffix>vpn_key</mat-icon>
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <mat-label>Password</mat-label>
-              <input type="password" matInput placeholder="Password" [(ngModel)]="rcpassword">
-              <mat-icon matSuffix>vpn_key</mat-icon>
-            </mat-form-field>
-            <button mat-button color="primary" (click)="register()">CREATE AN ACCOUNT </button>
-          </mat-tab>
-          <mat-tab label="WISHLIST">
-
-          </mat-tab>
-          <mat-tab label="BASKET">
-
-          </mat-tab>
-        </mat-tab-group>
-
-      </mat-card-content>
-
-    </mat-card>
-  </div>
-</mat-drawer>
 <header class="sidenav-content">
   <mat-toolbar style="height:25px;">
     <span class="span mat-small mat-caption">Free delivery on orders over 190€</span>
@@ -83,25 +14,25 @@
 
       <span class="example-spacer"></span>
 
-      <button mat-icon-button (click)="drawer.toggle()">
-        <mat-icon routerLink="/account">account_circle</mat-icon>
+      <button (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>account_circle</mat-icon>
       </button>
 
-      <button mat-icon-button (click)="!drawer.toggle()">
+      <button (click)="drawer.toggle(); toggleTab(2)" mat-icon-button>
         <mat-icon>favorite</mat-icon>
       </button>
-      <button mat-icon-button (click)="!drawer.toggle()">
+      <button (click)="drawer.toggle(); toggleTab(3)" mat-icon-button>
         <mat-icon>shopping_basket</mat-icon>
       </button>
     </mat-toolbar-row>
 
     <mat-toolbar-row class="separator">
-      <a mat-button href="https://www.google.com/" target="_blank">Clothing</a>
-      <a mat-button href="https://www.google.com/" target="_blank">Accessories</a>
-      <a mat-button href="https://www.google.com/" target="_blank">Coming soon</a>
+      <button color="primary" mat-button routerLink="/products">Clothing</button>
+      <a href="https://www.google.com/" mat-button target="_blank">Accessories</a>
+      <a href="https://www.google.com/" mat-button target="_blank">Coming soon</a>
       <span class="example-spacer"></span>
-      <a mat-button href="https://www.google.com/" target="_blank">Campaign stories</a>
-      <a mat-button href="https://www.google.com/" target="_blank">About us</a>
+      <a href="https://www.google.com/" mat-button target="_blank">Campaign stories</a>
+      <a href="https://www.google.com/" mat-button target="_blank">About us</a>
     </mat-toolbar-row>
   </mat-toolbar>
   <mat-divider></mat-divider>
