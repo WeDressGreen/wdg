@@ -31,6 +31,20 @@
   width: 400px;
   margin-left: 65px !important;
 }
+.example-full-width {
+  width: 100%;
+}
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.grey {
+  padding-top: 50px;
+  color: grey;
+}
+
 @media (max-width: 767px) {
   .footer-row {
     grid-template-columns: repeat(2, 1fr);
