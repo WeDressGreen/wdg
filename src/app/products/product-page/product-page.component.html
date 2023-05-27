@@ -1,17 +1,31 @@
+<mat-grid-list cols="2" rowHeight="650">
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <img class="example-header-image" style="width: 100%; height: 100%;" mat-card-image src="./assets/products.png"
+           alt="Photo of a Shiba Inu">
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-content style="padding-top: 10px" class="mat-body-2 card-grid-container">
 
-<h2 style="margin: 20px;font-weight: lighter !important;" class="mat-headline-6"> <strong>Clothing</strong></h2>
-<h2 style="margin-left: 20px" class="mat-subtitle-1">+ Filter</h2>
-  <mat-grid-list cols="4" rowHeight="580">
-    <mat-grid-tile *ngFor="let i of [0, 1, 2, 3,4,5,6,7]">
-      <mat-card class="example-card">
-        <img mat-card-image src="./assets/products.png" alt="Photo of a Shiba Inu">
-        <mat-card-content style="padding-top: 10px" class="mat-body-2">
-          <p>Go Slow Shirt fruit</p>
-          <p>32.00 EUR</p>
-          <p>XXS XS S M L XL XXL 3XL</p>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+        <mat-icon class="small-icon " *ngFor="let i of [0, 1, 2, 3,4]">star</mat-icon>
+        <u style="margin-left: 1%;">28 reviews</u>
+        <p class="padding-bottom padding-top padding-right mat-headline-6">Go Slow Shirt fruit
+          <button mat-icon-button>
+            <mat-icon>favorite_border</mat-icon>
+          </button>
+        </p>
+        <p class="padding-bottom">32.00 EUR</p>
+        <p class="padding-bottom">Color : Blue</p>
+        <p class="padding-bottom">Size : {{ selectedSize }}</p>
+        <button *ngFor="let size of sizes" mat-button class="padding-right border-color"
+                (click)="selectSize(size)">{{ size }}</button>
+        <br>
+        <button mat-button>+ ADD TO CART</button>
 
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
 

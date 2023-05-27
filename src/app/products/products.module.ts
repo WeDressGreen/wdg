@@ -11,6 +11,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   imports: [
@@ -24,6 +25,6 @@ import { ProductListComponent } from './product-list/product-list.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  declarations: [ProductListComponent]
+  declarations: [ProductListComponent,ProductPageComponent]
 })
 export class ProductsModule { }

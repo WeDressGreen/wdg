@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
+
+  isRotated: boolean = false;
+  toggleRotation() {
+    this.isRotated = !this.isRotated;
+  }
   constructor() { }
 
   ngOnInit() {

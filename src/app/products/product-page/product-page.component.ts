@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent implements OnInit {
+  sizes = ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL' ,'3XL'];
+  selectedSize: string | null = null;
+  selectSize(size: string) {
+    this.selectedSize = size;
+  }
 
   constructor() { }
 

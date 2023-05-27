@@ -1,4 +1,8 @@
 
+.clickable {
+  cursor: pointer !important;
+}
+
 container {
    position:absolute;
    top:0;
@@ -117,5 +121,4 @@ container {
     margin: 0 6px;
   }
 }
-
 
