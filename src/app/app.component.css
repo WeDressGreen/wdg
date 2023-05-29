@@ -2,6 +2,12 @@
 .clickable {
   cursor: pointer !important;
 }
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
 
 container {
    position:absolute;
@@ -13,8 +19,8 @@ container {
 
 .container .mat-drawer {
   padding-left:20px;
-  min-width:200px;
-  max-width: 550px;
+  min-width:550px;
+  max-width: 500px;
 }
 .example-spacer {
   flex: 1 1 auto;
@@ -119,6 +125,9 @@ container {
 
   .vertical-divider {
     margin: 0 6px;
+  }
+  .container .mat-drawer {
+    min-width:350px;
   }
 }
 

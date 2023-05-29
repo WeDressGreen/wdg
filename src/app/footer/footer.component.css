@@ -1,5 +1,6 @@
 .footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
   background-color: rgb(245, 245, 245);
@@ -54,5 +55,9 @@
 @media (max-width: 479px) {
   .footer-row {
     grid-template-columns: 1fr;
+  }
+  .footer-col-bigger{
+    width: 200px;
+    margin-left: 15px !important;
   }
 }

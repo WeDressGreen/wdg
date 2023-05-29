@@ -1,45 +1,9 @@
 
-<h2 style="margin: 20px;font-weight: lighter !important;" class="mat-headline-6"> <strong>Clothing</strong></h2>
+<h2 style="margin: 20px;font-weight: 400 !important; margin-top: 2.5%" class="mat-headline-6"> Clothing</h2>
 <h2 (click)="toggleRotation()" style="margin-left: 20px" [matMenuTriggerFor]="menu" #menuTrigger class="mat-subtitle-1">
   <mat-icon class="small-icon" >{{ isRotated ? 'close' : 'add' }}</mat-icon> Filter</h2>
 <mat-menu class="filter-menu" #menu="matMenu">
-  <div class="footer-row">
-    <div class="footer-col footer-col-bigger">
-      <h4>NEWSLETTER</h4>
-      <h5>Sign up to our newsletter for inspiration, more behind the scenes & exclusive updates.</h5>
-      <mat-form-field class="example-full-width">
-        <mat-label>Enter Email here *</mat-label>
-        <input floatLabel="never" matInput placeholder="SIGN UP" type="email">
-      </mat-form-field>
-      <mat-checkbox>I have read and understood the <strong>Privacy Policy </strong>.</mat-checkbox>
-      <div class="line"></div>
-      <h5 class="grey">©2023 WeDressGreen, All Rights Reserved.🤍</h5>
-    </div>
-    <div class="footer-col">
-      <h4>WEDRESSGREEN</h4>
-      <h5>About us</h5>
-      <h5>Our brands</h5>
-      <h5>Our values</h5>
-    </div>
-    <div class="footer-col">
-      <h4>CUSTOMER SERVICE</h4>
-      <h5>FAQ</h5>
-      <h5>Contact us</h5>
-      <h5>Deliveries</h5>
-      <h5>Returns & Exchanges</h5>
-      <div class="line"></div>
-      <h5 class="grey">Terms and conditions</h5>
 
-    </div>
-    <div class="footer-col">
-      <h4>SOCIALS</h4>
-      <h5>Instagram</h5>
-      <h5>Tiktok</h5>
-      <h5>YouTube</h5>
-      <div class="line"></div>
-      <h5 class="grey">Privacy Policy</h5>
-    </div>
-  </div>
 </mat-menu>
 <mat-grid-list cols="4" rowHeight="580">
     <mat-grid-tile class="clickable" *ngFor="let i of [0, 1, 2, 3,4,5,6,7]">
@@ -52,7 +16,7 @@
           <p>XXS XS S M L XL XXL 3XL</p>
         </mat-card-content>
       </mat-card>
-   
+
     </mat-grid-tile>
   </mat-grid-list>
 

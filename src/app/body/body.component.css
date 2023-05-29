@@ -23,7 +23,18 @@
 
 .scroll-container {
   overflow-x: scroll;
+
 }
+
+@media (min-width: 1600px) {
+  .scroll-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the cards */
+    align-items: center;
+  }
+}
+
+
 
 .mat-grid-list {
   width: 1800px;

@@ -1,1 +1,53 @@
-<p>account works!</p>
+<mat-drawer-container class="example-container">
+  <mat-drawer class="example-sidenav" mode="side" opened>
+
+
+    <mat-nav-list>
+      <a mat-list-item style="margin-left:" > <mat-icon>account_circle</mat-icon>My Profile</a>
+
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/account/profile">My account</a>
+      <a mat-list-item routerLink="/account/settings"> My orders</a>
+      <a mat-list-item routerLink="/account/notifications"> Wishlist</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/account/notifications">Log out</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content class="example-sidenav-content">
+
+    <div fxLayout="row" fxLayoutGap="300px" style="width: 100%">
+      <h3 class="mat-subtitle-1"> <strong>MY ACCOUNT</strong></h3>
+      <mat-card fxFlex="25%" style="margin-top: 3%">
+
+        <div class="row">
+        <mat-card-subtitle style="margin: 2%;flex-grow: 1"> PROFILE DETAILS</mat-card-subtitle>
+        <mat-card-actions style="margin-left: auto;"><button mat-button>Edit</button></mat-card-actions>
+        </div>
+        <mat-card-content>
+          <div class="row">
+          <a class="custom-avatar">
+           MZ
+          </a>
+          <a style="margin-bottom:3% !important;">maramzitouni@gmail.com</a>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card fxFlex="25%">
+        pro
+      </mat-card>
+
+      <mat-card fxFlex="25%">
+        pro
+      </mat-card>
+
+      <mat-card fxFlex="25%">
+        pro
+      </mat-card>
+    </div>
+
+
+   </mat-drawer-content>
+</mat-drawer-container>
+
+

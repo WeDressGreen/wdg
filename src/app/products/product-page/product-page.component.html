@@ -22,7 +22,10 @@
         <button *ngFor="let size of sizes" mat-button class="padding-right border-color"
                 (click)="selectSize(size)">{{ size }}</button>
         <br>
-        <button mat-button>+ ADD TO CART</button>
+        <mat-card-actions class="button-container">
+          <button class="full-width-button" mat-button> + ADD TO CART</button>
+        </mat-card-actions>
+
 
       </mat-card-content>
     </mat-card>
