@@ -12,12 +12,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { AccountComponent } from './account/account.component';
-
+import { ResellComponent } from './resell/resell.component';
 
 // Routing
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AppComponent } from './app.component';
     FooterComponent,
     BodyComponent,
     AccountComponent,
+    ResellComponent,
   ],
   imports: [
     BrowserModule,
