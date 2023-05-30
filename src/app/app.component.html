@@ -42,7 +42,7 @@
           <ng-template matTabContent>
             <mat-divider></mat-divider>
             <mat-card-content class="center-content">
-              <h3>{{ tab.content }}</h3>
+              <h3 [innerHTML]="tab.content"></h3>
             </mat-card-content>
           </ng-template>
         </mat-tab>

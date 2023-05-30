@@ -51,7 +51,7 @@ export class AppComponent {
     }];
 
   links = [
-    {label: 'Clothing', routerLink: '/products'},
+    {label: 'Clothing', routerLink: 'front/products'},
     {label: 'Accessories', routerLink: ''},
     {label: 'Coming soon', routerLink: ''},
     {label: 'Sell', routerLink: ''},
@@ -66,9 +66,11 @@ export class AppComponent {
 
   menuItems = [
     { label: 'WeDressGreen', routerLink: '/' },
-    { label: 'Re-sell', routerLink: '/resell' },
+    { label: 'Re-sell', routerLink: 'front/resell' },
     { label: 'Brands', routerLink: '' }
   ];
+
+
   register() {
   }
 

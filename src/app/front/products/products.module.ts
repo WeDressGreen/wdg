@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 
 // Material section
-import {MaterialExampleModule} from '../../material.module';
+import {MaterialExampleModule} from '../../../material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatNativeDateModule} from '@angular/material/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';

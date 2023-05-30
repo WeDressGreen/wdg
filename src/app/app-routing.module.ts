@@ -1,38 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AccountComponent } from './account/account.component';
-import { BodyComponent } from './body/body.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { ResellComponent } from './resell/resell.component';
+import { BodyComponent } from './front/body/body.component';
+import { NotFoundComponent } from './front/not-found/not-found.component';
+
+
+
 
 // @ts-ignore
 const routes: Routes = [
   {
-    path: 'products',
-    loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
-  },
-  {
-    path: 'account',
-    component: AccountComponent,
+    path: 'front',
+    loadChildren: () => import('./front/front.module').then(m => m.FrontModule)
   },
   {
     path: '',
-    component: BodyComponent,
-  },
-  {
-    path: 'resell',
-    component: ResellComponent,
-  },
-  {
-    path: '',
-    redirectTo: '',
-    pathMatch: 'full'
+    loadChildren: () => import('./front/front.module').then(m => m.FrontModule)
   },
   {
     path: '**',
     component: NotFoundComponent,
-  }
-
+  },
+  {
+    path: '',
+    redirectTo: 'front',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
