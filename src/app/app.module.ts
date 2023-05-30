@@ -12,8 +12,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
-//import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './front/footer/footer.component';
 
 
 
