@@ -15,7 +15,6 @@ import { FrontRoutingModule } from './front-routing.module';
 
 import { BodyComponent } from './body/body.component';
 import { AccountComponent } from './account/account.component';
-import { ResellComponent } from './resell/resell.component';
 import { MatTabGroup } from '@angular/material/tabs';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -26,7 +25,7 @@ import { CommonModule } from '@angular/common';
   declarations: [
     BodyComponent,
     AccountComponent,
-    ResellComponent,
+
 
   ],
   imports: [

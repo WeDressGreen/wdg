@@ -1,11 +1,9 @@
 
-<div style="padding-top:10%;display: flex; justify-content: center;  background-color: white; height: 20vh;">
-  <h3 style="" class="mat-subtitle-1"> <strong>WELCOME TO WEDRESSGREEN RE-SELL</strong></h3>
-  <br><br>
-  <h3>WeDressGreen Re-sell is your go-to place to buy and sell pre-loved good quality pieces.</h3>
-  <br>
-  <button mat-flat-button> Shop</button>
-  <button mat-flat-button> Sell</button>
+<div style="padding-top:5%;padding-bottom:5%;display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: white; height: 20vh;">
+  <h3 class="mat-subtitle-1"><strong>WELCOME TO WEDRESSGREEN RE-SELL</strong></h3>
+  <p style="margin-top: 10px; text-align: center;">WeDressGreen Re-sell is your go-to place to buy and sell pre-loved good quality pieces.</p>
+  <button mat-flat-button>Shop</button>
+  <button mat-flat-button>Sell</button>
 </div>
 
 
@@ -13,7 +11,7 @@
 <div class="scroll-container">
   <mat-grid-list cols="4" rowHeight="620">
     <mat-grid-tile *ngFor="let i of [0, 1, 2, 3]">
-      <mat-card class="example-card">
+      <mat-card class="example-card clickable">
         <img mat-card-image src="../../../assets/img.png" alt="Photo of a Shiba Inu">
         <mat-card-content style="padding-top: 10px" class="mat-body-2">
           <p>Go Slow Shirt fruit</p>
