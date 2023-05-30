@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { BodyComponent } from './body/body.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { ResellComponent } from './resell/resell.component';
 
 // @ts-ignore
@@ -26,7 +27,12 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   }
+
 ];
 
 @NgModule({

@@ -1,85 +1,57 @@
 <mat-drawer-container class="example-container">
   <mat-drawer class="example-sidenav" mode="side" opened>
-
-
     <mat-nav-list>
       <a mat-list-item>
-
-        <mat-icon style="margin-right: 5px;" >account_circle</mat-icon>
+        <mat-icon style="margin-right: 5px;">account_circle</mat-icon>
         <span style="margin-left: 5px;">My profile</span>
       </a>
-
-
-
       <mat-divider></mat-divider>
-      <div style="margin-top: 5%;margin-bottom: 120%">
-        <a mat-list-item routerLink="/account/profile">My account</a>
-        <a mat-list-item routerLink="/account/settings"> My orders</a>
-        <a mat-list-item routerLink="/account/notifications"> Wishlist</a>
+      <div style="margin-top: 5%; margin-bottom: 120%">
+        <a mat-list-item *ngFor="let link of accountLinks" [routerLink]="link.routerLink">{{ link.label }}</a>
       </div>
       <mat-divider></mat-divider>
       <a mat-list-item>
-        <mat-icon style="margin-right: 5px;" >exit_to_app</mat-icon>
-
-        <span  style="margin-left: 5px;">Log Out</span>
+        <mat-icon style="margin-right: 5px;">exit_to_app</mat-icon>
+        <span style="margin-left: 5px;">Log Out</span>
       </a>
-
-
     </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content class="example-sidenav-content">
-
     <div fxLayout="row" fxLayoutGap="300px" style="width: 100%">
       <h3 class="mat-subtitle-1"> <strong>MY ACCOUNT</strong></h3>
-      <mat-card fxFlex="25%" style="margin-top: 3%;margin-bottom: 1.5%;box-shadow: none; border-radius: 0;">
-
+      <mat-card fxFlex="25%" style="margin-top: 3%; margin-bottom: 1.5%; box-shadow: none; border-radius: 0;">
         <div class="row">
-        <mat-card-subtitle style="margin: 2%;flex-grow: 1"> PROFILE DETAILS</mat-card-subtitle>
-        <mat-card-actions style="margin-left: auto;"><button mat-button>Edit</button></mat-card-actions>
+          <mat-card-subtitle style="margin: 2%; flex-grow: 1">PROFILE DETAILS</mat-card-subtitle>
+          <mat-card-actions style="margin-left: auto;"><button mat-button>Edit</button></mat-card-actions>
         </div>
         <mat-card-content>
           <div class="row">
-          <a class="custom-avatar">
-           MZ
-          </a>
-          <a style="margin-bottom:3% !important;"> <strong>maramzitouni@gmail.com</strong>
-            <mat-card-subtitle>0 followers 1 item</mat-card-subtitle>
-          </a>
+            <a class="custom-avatar">MZ</a>
+            <a style="margin-bottom:3% !important;"> <strong>maramzitouni@gmail.com</strong>
+              <mat-card-subtitle>0 followers 1 item</mat-card-subtitle>
+            </a>
           </div>
         </mat-card-content>
       </mat-card>
-
-      <mat-card fxFlex="25%" style="margin-bottom: 1.5%;box-shadow: none; border-radius: 0;">
+      <mat-card fxFlex="25%" style="margin-bottom: 1.5%; box-shadow: none; border-radius: 0;">
         <div class="row">
-        <mat-card-subtitle style="margin: 2%;flex-grow: 1"> PERSONAL INFORMATION</mat-card-subtitle>
-        <mat-card-actions style="margin-left: auto;"><button mat-button>Edit</button></mat-card-actions>
+          <mat-card-subtitle style="margin: 2%; flex-grow: 1">PERSONAL INFORMATION</mat-card-subtitle>
+          <mat-card-actions style="margin-left: auto;"><button mat-button>Edit</button></mat-card-actions>
         </div>
         <p style="margin-left: 2%">
-          Maram Zitouni
-          <br>
-          15 rue de carnac
-          <br>
-          Montigny-le-bretonneux
-          <br>
-          FR
-          <br><br>
-          maramzitouni@gmail.com
-          <br>
+          Maram Zitouni<br>15 rue de carnac<br>Montigny-le-bretonneux<br>FR<br><br>maramzitouni@gmail.com<br>
           0635604531
         </p>
       </mat-card>
-
       <mat-card fxFlex="25%" style="box-shadow: none; border-radius: 0;">
         <div class="row">
-          <mat-card-subtitle style="margin: 2%;flex-grow: 1"> PASSWORD</mat-card-subtitle>
+          <mat-card-subtitle style="margin: 2%; flex-grow: 1">PASSWORD</mat-card-subtitle>
           <mat-card-actions style="margin-left: auto;"><button mat-button>Edit</button></mat-card-actions>
         </div>
       </mat-card>
-
     </div>
-
-
-   </mat-drawer-content>
+  </mat-drawer-content>
 </mat-drawer-container>
+
 
 

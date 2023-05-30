@@ -8,86 +8,45 @@
     </mat-toolbar-row>
     <mat-divider></mat-divider>
     <mat-tab-group #tabGroup class="center-content1">
-      <mat-tab label="ACCOUNT">
-        <ng-template matTabContent>
-          <mat-divider></mat-divider>
-          <mat-card-header class="header-container">
-            <mat-card-title>LOG IN</mat-card-title>
-            <mat-card-subtitle>To access your account</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <mat-form-field class="example-full-width">
-              <mat-label>Email</mat-label>
-              <input [(ngModel)]="email" matInput placeholder="Email" type="email" value="">
-              <mat-icon matSuffix>email</mat-icon>
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <mat-label>Password</mat-label>
-              <input [(ngModel)]="password" matInput placeholder="Password" type="password">
-              <mat-icon matSuffix>vpn_key</mat-icon>
-            </mat-form-field>
-          </mat-card-content>
-          <mat-card-actions class="centered-button">
-            <button (click)="login()" color="primary" mat-button>SIGN IN</button>
-          </mat-card-actions>
-        </ng-template>
-      </mat-tab>
+        <mat-tab *ngFor="let tab of tabs1" [label]="tab.label">
+          <ng-template matTabContent>
+            <mat-divider></mat-divider>
+            <mat-card-header class="header-container">
+              <mat-card-title>{{ tab.title }}</mat-card-title>
+              <mat-card-subtitle>{{ tab.subtitle }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input [(ngModel)]="tab.email" matInput placeholder="Email" type="email">
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input [(ngModel)]="tab.password" matInput placeholder="Password" type="password">
+                <mat-icon matSuffix>vpn_key</mat-icon>
+              </mat-form-field>
+              <mat-form-field *ngIf="tab.label === 'SIGN UP'" class="example-full-width">
+                <mat-label>Confirm Password</mat-label>
+                <input [(ngModel)]="tab.confirmPassword" matInput placeholder="Confirm Password" type="password">
+                <mat-icon matSuffix>vpn_key</mat-icon>
+              </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions class="centered-button">
+              <button (click)="tab.action()" color="primary" mat-button>{{ tab.buttonText }}</button>
+            </mat-card-actions>
+          </ng-template>
+        </mat-tab>
 
-      <mat-tab label="SIGN UP">
-        <ng-template matTabContent>
-          <mat-divider></mat-divider>
-          <mat-card-header class="header-container">
-            <mat-card-title>SIGN UP</mat-card-title>
-            <mat-card-subtitle>To create your account</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <mat-form-field class="example-full-width">
-              <mat-label>Email</mat-label>
-              <input [(ngModel)]="remail" matInput placeholder="Email" type="email" value="">
-              <mat-icon matSuffix>email</mat-icon>
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <mat-label>Password</mat-label>
-              <input [(ngModel)]="rpassword" matInput placeholder="Password" type="password">
-              <mat-icon matSuffix>vpn_key</mat-icon>
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <mat-label>Password</mat-label>
-              <input [(ngModel)]="rcpassword" matInput placeholder="Password" type="password">
-              <mat-icon matSuffix>vpn_key</mat-icon>
-            </mat-form-field>
-          </mat-card-content>
-          <mat-card-actions class="centered-button">
-            <button (click)="register()" color="primary" mat-button>CREATE AN ACCOUNT</button>
-          </mat-card-actions>
-        </ng-template>
-      </mat-tab>
-
-      <mat-tab label="WISHLIST">
-        <ng-template matTabContent>
-          <mat-divider></mat-divider>
-          <mat-card-content class="center-content">
-
-
-              <h3>❤️
-                <br> No products added yet .
-                <br>
-
-            Create an account or login to be able to save wishlist</h3>
-
-          </mat-card-content>
-        </ng-template>
-      </mat-tab>
-
-      <mat-tab label="BASKET">
-        <ng-template matTabContent>
-          <mat-divider></mat-divider>
-          <mat-card-content class="center-content">
-          <h3>YOUR BASKET IS EMPTY</h3>
-          </mat-card-content>
-        </ng-template>
-      </mat-tab>
-    </mat-tab-group>
+        <mat-tab *ngFor="let tab of tabs" [label]="tab.label">
+          <ng-template matTabContent>
+            <mat-divider></mat-divider>
+            <mat-card-content class="center-content">
+              <h3>{{ tab.content }}</h3>
+            </mat-card-content>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
   </mat-drawer>
 
   <header class="sidenav-content">
@@ -96,28 +55,17 @@
     </mat-toolbar>
     <mat-toolbar style="background-color:white;">
       <mat-toolbar-row>
-        <span class="clickable" routerLink="/">WeDressGreen</span>
-        <mat-divider class="vertical-divider"></mat-divider>
-        <span class="clickable" routerLink="/resell">Re-sell</span>
-        <mat-divider class="vertical-divider"></mat-divider>
-        <span class="clickable">Brands</span>
-        <span class="example-spacer"></span>
-        <button (click)="drawer.toggle()" mat-icon-button>
-          <mat-icon>account_circle</mat-icon>
-        </button>
-        <button (click)="drawer.toggle(); toggleTab(2)" mat-icon-button>
-          <mat-icon>favorite</mat-icon>
-        </button>
-        <button (click)="drawer.toggle(); toggleTab(3)" mat-icon-button>
-          <mat-icon>shopping_basket</mat-icon>
+          <ng-container *ngFor="let menuItem of menuItems">
+            <span class="clickable" [routerLink]="menuItem.routerLink">{{ menuItem.label }}</span>
+            <mat-divider class="vertical-divider"></mat-divider>
+          </ng-container>
+          <span class="example-spacer"></span>
+        <button *ngFor="let icon of icons; let i = index" (click)="drawer.toggle();toggleTab(i)" mat-icon-button>
+          <mat-icon>{{icon.label}}</mat-icon>
         </button>
       </mat-toolbar-row>
       <mat-toolbar-row class="separator">
-        <button  mat-button routerLink="/products">Clothing</button>
-        <a href="" mat-button target="_blank">Accessories</a>
-        <a href="" mat-button target="_blank">Coming soon</a>
-        <a href="" mat-button target="_blank">Sell</a>
-        <a href="" mat-button target="_blank">Shop Second-hand</a>
+        <button mat-button *ngFor="let link of links" [routerLink]="link.routerLink">{{ link.label }}</button>
         <span class="example-spacer"></span>
         <a href="" mat-button target="_blank">Campaign stories</a>
         <a href="" mat-button target="_blank">About us</a>
@@ -125,7 +73,6 @@
     </mat-toolbar>
     <mat-divider></mat-divider>
   </header>
-
   <router-outlet></router-outlet>
   <mat-divider></mat-divider>
   <app-footer></app-footer>
