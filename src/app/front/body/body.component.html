@@ -2,7 +2,7 @@
 <div class="scroll-container">
   <mat-grid-list cols="4" rowHeight="620">
     <mat-grid-tile *ngFor="let i of [0, 1, 2, 3]">
-      <mat-card class="example-card">
+      <mat-card [routerLink]="['/front/products/info', i]" class="example-card">
         <img mat-card-image src="../../../assets/img.png" alt="Photo of a Shiba Inu">
         <mat-card-content style="padding-top: 10px" class="mat-body-2">
           <p>Go Slow Shirt fruit</p>

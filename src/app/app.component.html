@@ -1,4 +1,4 @@
-<mat-drawer-container autosize class="container">
+<mat-drawer-container autosize>
   <mat-drawer #drawer class="sidenav" position="end">
     <mat-toolbar-row style="height:94px;">
       <span class="example-spacer"></span>
@@ -7,7 +7,7 @@
       </button>
     </mat-toolbar-row>
     <mat-divider></mat-divider>
-    <mat-tab-group #tabGroup class="center-content1">
+    <mat-tab-group #tabGroup class="center-content1" style="width:500px">
         <mat-tab *ngFor="let tab of tabs1" [label]="tab.label">
           <ng-template matTabContent>
             <mat-divider></mat-divider>

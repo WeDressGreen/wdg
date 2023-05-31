@@ -11,6 +11,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { ResellRoutingModule } from './resell-routing.module';
 import { ResellMainComponent } from './resell-main/resell-main.component';
+import { ResellPageComponent } from './resell-page/resell-page.component';
+import { ResellProductComponent } from './resell-product/resell-product.component';
 
 
 @NgModule({
@@ -26,6 +28,6 @@ import { ResellMainComponent } from './resell-main/resell-main.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  declarations: [ResellMainComponent]
+  declarations: [ResellMainComponent,ResellPageComponent,ResellProductComponent]
 })
 export class ResellModule { }

@@ -17,11 +17,7 @@ container {
    bottom:0;
  }
 
-.container .mat-drawer {
-  padding-left:20px;
-  min-width:550px;
-  max-width: 500px;
-}
+
 .example-spacer {
   flex: 1 1 auto;
 }

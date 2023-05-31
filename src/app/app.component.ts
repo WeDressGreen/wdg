@@ -54,7 +54,7 @@ export class AppComponent {
     {label: 'Clothing', routerLink: 'front/products'},
     {label: 'Accessories', routerLink: ''},
     {label: 'Coming soon', routerLink: ''},
-    {label: 'Sell', routerLink: ''},
+    {label: 'Sell', routerLink: 'front/resell/sell'},
     {label: 'Shop Second-hand', routerLink: ''}
   ];
 
