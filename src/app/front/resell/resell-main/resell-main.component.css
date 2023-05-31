@@ -1,4 +1,16 @@
 
+.example-button-row {
+  padding-top: 2%;
+  display: flex;
+  max-width: 600px;
+}
+
+.welcome{
+  padding-top:10%;
+  padding-bottom:10%;
+  display: flex;
+  flex-direction: column; justify-content: center; align-items: center; background-color: white; height: 20vh;
+}
 .mat-grid-tile {
   background: white;
   box-shadow: none !important;
