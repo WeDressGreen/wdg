@@ -10,9 +10,9 @@ import { MatNativeDateModule} from '@angular/material/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { ResellRoutingModule } from './resell-routing.module';
-import { ResellMainComponent } from './resell-main/resell-main.component';
-import { ResellPageComponent } from './resell-page/resell-page.component';
-import { ResellProductComponent } from './resell-product/resell-product.component';
+import { ResellMainComponent } from './pages/resell-main/resell-main.component';
+import { ResellPageComponent } from './pages/resell-page/resell-page.component';
+import { ResellProductComponent } from './pages/resell-product/resell-product.component';
 
 
 @NgModule({

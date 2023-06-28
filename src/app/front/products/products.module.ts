@@ -10,8 +10,8 @@ import { MatNativeDateModule} from '@angular/material/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { ProductsRoutingModule } from './products-routing.module';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductPageComponent } from './product-page/product-page.component';
+import { ProductListComponent } from './pages/product-list/product-list.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
 
 @NgModule({
   imports: [

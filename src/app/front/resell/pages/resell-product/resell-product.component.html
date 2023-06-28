@@ -1,0 +1,60 @@
+<mat-horizontal-stepper>
+  <mat-step label="FIND YOUR PIECE">
+    <div style="margin-top: 5%!important;">
+      <button mat-stroked-button class="margin-right" matStepperPrevious type="button">Back</button>
+      <button mat-stroked-button class="margin-right" matStepperNext type="button">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="CONDITION REPORT">
+    <div style="margin-top: 5%!important;">
+    <div class="mat-headline-5" style="margin-bottom: 2% !important;">TELL US ABOUT YOUR ITEM</div>
+    Is your item new with tags ?
+    <div class="example-button-row">
+      <button class="button-style" mat-stroked-button>Yes</button>
+      <button class="button-style" mat-stroked-button>No</button>
+    </div>
+    Is there anything about your item’s condition that would differ if it was bought new?
+    <div class="example-button-row">
+      <button class="button-style" mat-stroked-button>Yes</button>
+      <button class="button-style" mat-stroked-button>No</button>
+    </div>
+    <mat-form-field class="example-full-width" style="margin-right:50%" >
+      <mat-label>Anything else you'd like to tell your buyers? *</mat-label>
+      <input floatLabel="never" matInput placeholder="Comments" type="text">
+    </mat-form-field>
+    <div>
+      <button mat-stroked-button  class="margin-right"  matStepperPrevious type="button">Back</button>
+      <button mat-stroked-button  class="margin-right" matStepperNext type="button">Next</button>
+    </div>
+    </div>
+  </mat-step>
+  <mat-step label="ADD PHOTOS">
+    <div style="margin-top: 5%!important;">
+    <div class="mat-headline-6">  PLEASE PROVIDE PHOTOS</div>
+    <div class="mat-typography">
+      <p>Include at least two photos of your item — e.g. one of the front and one of the back.Your item should be laid flat on a plain background.</p>
+    <p>We recommend taking your photos in portrait orientation with good lighting.</p>
+    </div>
+      <button mat-stroked-button>ADD PHOTO<mat-icon>camera_alt</mat-icon></button>
+    <div>
+      <button mat-stroked-button   class="margin-right" matStepperPrevious type="button">Back</button>
+      <button mat-stroked-button  class="margin-right"  matStepperNext type="button">Next</button>
+    </div>
+    </div>
+  </mat-step>
+  <mat-step label="SET PRICE">
+    <div style="margin-top: 5%!important;">
+
+      <button mat-stroked-button  matStepperPrevious type="button">Back</button>
+      <button mat-stroked-button  matStepperNext type="button">Next</button>
+
+    </div>
+  </mat-step>
+  <mat-step label="CONFIRM LISTING">
+    <div style="margin-top: 5%!important;">
+      <button mat-stroked-button matStepperPrevious type="button">Back</button>
+      <button mat-stroked-button matStepperNext type="button">Next</button>
+    </div>
+  </mat-step>
+
+</mat-horizontal-stepper>

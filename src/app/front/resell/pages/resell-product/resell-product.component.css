@@ -1,0 +1,27 @@
+.example-button-row {
+  /*display: table-cell;
+  max-width: 6000px;
+  padding-top: 10%;
+  padding-bottom: 10%;*/
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  padding-top: 1%;
+  padding-bottom: 3%;
+}
+.button-style{
+  flex: 1;
+  padding: 5px 10px;
+  box-sizing: border-box;
+
+}
+.mat-form-field {
+  border-color: black;
+  height: 5px; /* adjust to your desired height */
+  caret-color: black;
+  width: 600px !important;
+}
+.margin-right{
+  padding: 1.5%;
+  margin-right: 40%;
+}
