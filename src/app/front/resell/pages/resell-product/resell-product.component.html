@@ -1,14 +1,13 @@
 <mat-horizontal-stepper>
-  <mat-step label="FIND YOUR PIECE">
-    <div style="margin-top: 5%!important;">
-      <button mat-stroked-button class="margin-right" matStepperPrevious type="button">Back</button>
-      <button mat-stroked-button class="margin-right" matStepperNext type="button">Next</button>
-    </div>
-  </mat-step>
   <mat-step label="CONDITION REPORT">
     <div style="margin-top: 5%!important;">
+
     <div class="mat-headline-5" style="margin-bottom: 2% !important;">TELL US ABOUT YOUR ITEM</div>
-    Is your item new with tags ?
+      <mat-form-field style="width: 35rem">
+        <mat-label>Item description </mat-label>
+        <input floatLabel="never" matInput placeholder="Example : Black Chanel Coat" type="text">
+      </mat-form-field>
+    <p>Is your item new with tags ?</p>
     <div class="example-button-row">
       <button class="button-style" mat-stroked-button>Yes</button>
       <button class="button-style" mat-stroked-button>No</button>
@@ -18,13 +17,13 @@
       <button class="button-style" mat-stroked-button>Yes</button>
       <button class="button-style" mat-stroked-button>No</button>
     </div>
-    <mat-form-field class="example-full-width" style="margin-right:50%" >
+    <mat-form-field class="example-full-width" style="width: 35rem ; height: 10rem" >
       <mat-label>Anything else you'd like to tell your buyers? *</mat-label>
       <input floatLabel="never" matInput placeholder="Comments" type="text">
     </mat-form-field>
     <div>
       <button mat-stroked-button  class="margin-right"  matStepperPrevious type="button">Back</button>
-      <button mat-stroked-button  class="margin-right" matStepperNext type="button">Next</button>
+      <button mat-stroked-button  class="margin-right" style="left: 20rem" matStepperNext type="button">Next</button>
     </div>
     </div>
   </mat-step>
@@ -34,26 +33,42 @@
     <div class="mat-typography">
       <p>Include at least two photos of your item — e.g. one of the front and one of the back.Your item should be laid flat on a plain background.</p>
     <p>We recommend taking your photos in portrait orientation with good lighting.</p>
+      <br>
     </div>
-      <button mat-stroked-button>ADD PHOTO<mat-icon>camera_alt</mat-icon></button>
+      <button style="width: 20rem; height: 10rem" mat-stroked-button>ADD PHOTO<mat-icon>camera_alt</mat-icon></button>
     <div>
+      <br>
       <button mat-stroked-button   class="margin-right" matStepperPrevious type="button">Back</button>
-      <button mat-stroked-button  class="margin-right"  matStepperNext type="button">Next</button>
+      <button mat-stroked-button  class="margin-right" style="left: 20rem"  matStepperNext type="button">Next</button>
     </div>
     </div>
   </mat-step>
   <mat-step label="SET PRICE">
     <div style="margin-top: 5%!important;">
+      <div class="mat-headline-6">   SET PRICE </div>
 
-      <button mat-stroked-button  matStepperPrevious type="button">Back</button>
-      <button mat-stroked-button  matStepperNext type="button">Next</button>
+      <p style="margin-top: 3%!important;">Based on the original retail price of $125 and the condition of your item we recommend setting your listing price at $100. </p>
+      <br>
+      <p>$100 <u>Edit</u> </p>
+      <br>
+
+      <p>If your item sells, you can choose between $100 in WeDressGreen store credit (100% of sale price) or a $70 cash payout (70% of sale price).</p>
+      <br>
+      <p>You can change the price of your listing any time before your item sells. </p>
+      <br>
+
+      <button mat-stroked-button class="margin-right"  matStepperPrevious type="button">Back</button>
+      <button mat-stroked-button class="margin-right"  matStepperNext type="button" style="left: 20rem">Next</button>
 
     </div>
   </mat-step>
   <mat-step label="CONFIRM LISTING">
     <div style="margin-top: 5%!important;">
-      <button mat-stroked-button matStepperPrevious type="button">Back</button>
-      <button mat-stroked-button matStepperNext type="button">Next</button>
+      <div class="mat-headline-6"> REVIEW YOUR LISTING</div>
+      The preview below shows how your listing will appear to customers. Please review and then click “List Item” to submit.
+      <br>
+      <button mat-stroked-button class="margin-right" matStepperPrevious type="button">Back</button>
+      <button mat-stroked-button class="margin-right" matStepperNext type="button" style="left: 20rem">List it</button>
     </div>
   </mat-step>
 

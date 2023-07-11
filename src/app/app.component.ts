@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTabGroup } from '@angular/material/tabs';
 
-
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,13 @@ export class AppComponent {
   rpassword: any;
   rcpassword: any;
 
-  constructor(public dialog: MatDialog, private snackBar:MatSnackBar) {}
+  constructor(public dialog: MatDialog, private snackBar:MatSnackBar ,private translate: TranslateService) {
+
+    this.translate.setDefaultLang('en'); // Set the default language
+    this.translate.use('en'); // Use a specific language
+
+
+  }
 
   tabs = [
     {

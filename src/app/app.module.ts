@@ -8,14 +8,19 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatNativeDateModule} from '@angular/material/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // Routing
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './front/footer/footer.component';
+import { LanguageSwitcherComponent } from './shared/language-switcher.component';
 
-
-
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,8 +30,14 @@ import { FooterComponent } from './front/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    //FooterComponent,
-
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     // Material
     BrowserAnimationsModule,
     MatSlideToggleModule,
@@ -35,7 +46,7 @@ import { FooterComponent } from './front/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [ ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
